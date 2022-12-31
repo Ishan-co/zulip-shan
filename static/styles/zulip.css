@@ -3324,3 +3324,27 @@ textarea.invitee_emails {
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .custom-column-middle {
+        width: 78%;
+    }
+    .custom-compose-content {
+        width: 78%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custom-column-middle {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .custom-column-middle {
+        width: 80%;
+    }
+    .custom-compose-content {
+        width: 80%;
+    }
+}
