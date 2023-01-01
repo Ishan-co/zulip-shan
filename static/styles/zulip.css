@@ -3325,6 +3325,13 @@ textarea.invitee_emails {
     }
 }
 
+
+/* ==========================  ISHAN  ==========================*/
+
+* {
+    font-family: iranyekan;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1366px) {
     .custom-column-middle {
         width: 78%;
@@ -3347,4 +3354,9 @@ textarea.invitee_emails {
     .custom-compose-content {
         width: 80%;
     }
+}
+
+.custom-rtl{
+    direction: rtl;
+    text-align: right;
 }

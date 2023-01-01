@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="column-middle custom-column-middle" id="navbar-middle">
-            <div class="column-middle-inner" style="width: 100%;">
+            <div class="column-middle-inner" style="width: 100%;direction: rtl">
                 <div id="streamlist-toggle" {{#if embedded}}class="hide-streamlist-toggle-visibility"{{/if}} title="{{t 'Stream list' }} (q)">
                     <a id="streamlist-toggle-button" role="button" tabindex="0"><i class="fa fa-reorder" aria-hidden="true"></i>
                         <span id="streamlist-toggle-unreadcount">0</span>
@@ -18,7 +18,7 @@
                     {{#if search_pills_enabled }}
                     <div id="searchbox">
                         <form id="searchbox_form" class="navbar-search">
-                            <div id="search_arrows" class="pill-container input-append">
+                            <div id="search_arrows" class="pill-container input-append" style="display: none;">
                                 <span class="search_icon search_open" ><i class="fa fa-search" aria-hidden="true"></i></span>
                                 <div contenteditable="true" class="input search-query input-block-level" id="search_query" type="text" placeholder="{{t 'Search' }}"
                                   autocomplete="off" aria-label="{{t 'Search' }}" title="{{t 'Search' }} (/)">
