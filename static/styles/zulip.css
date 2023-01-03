@@ -3352,7 +3352,19 @@ textarea.invitee_emails {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 880px){
+@media screen and (min-width: 768px) and (max-width: 850px){
+    .custom-top-navbar-container{
+        border-left: none;
+    }
+    .custom-column-middle {
+        width: 62.5%;
+    }
+    .custom-compose-content {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 880px){
     .custom-top-navbar-container{
         border-left: none;
     }
@@ -3370,18 +3382,6 @@ textarea.invitee_emails {
     }
     .custom-column-middle {
         width: 70%;
-    }
-    .custom-compose-content {
-        width: 80%;
-    }
-}
-
-@media screen and (min-width: 1001px) and (max-width: 1200px){
-    .custom-top-navbar-container{
-        border-left: none;
-    }
-    .custom-column-middle {
-        width: 75%;
     }
     .custom-compose-content {
         width: 80%;
