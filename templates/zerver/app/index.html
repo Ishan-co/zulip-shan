@@ -68,13 +68,13 @@
 </div>
 
 <div id="app-loading">
-    <div id="app-loading-middle-content">
+    <div id="app-loading-middle-content" style="color: #1a1f2d">
         <div id="app-loading-logo">
-            <img src="/static/images/logo/zulip-icon-circle.svg" />
+            <img src="/static/images/logo/ishan-icon-circle.svg"/>
         </div>
-        <h3 style="direction: rtl;">{{ _('Loading...') }}</h3>
+        <h3 style="direction: rtl;margin-top: 100%;display: none;">{{ _('Loading...') }}</h3>
     </div>
-    <div id="app-loading-bottom-content">
+    <div id="app-loading-bottom-content" style="display: none">
         <p>{% trans %}If this message does not go away, try <a id="reload-lnk">reloading</a> the page.{% endtrans %}</p>
         <script nonce="{{ csp_nonce }}">
             document.addEventListener('DOMContentLoaded', function () {
