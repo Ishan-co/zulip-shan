@@ -3332,6 +3332,11 @@ textarea.invitee_emails {
     font-family: iranyekan;
 }
 
+.custom-rtl{
+    direction: rtl;
+    text-align: right;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1366px) {
     .custom-column-middle {
         width: 78%;
@@ -3347,6 +3352,54 @@ textarea.invitee_emails {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 880px){
+    .custom-top-navbar-container{
+        border-left: none;
+    }
+    .custom-column-middle {
+        width: 67.5%;
+    }
+    .custom-compose-content {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 881px) and (max-width: 1000px){
+    .custom-top-navbar-container{
+        border-left: none;
+    }
+    .custom-column-middle {
+        width: 70%;
+    }
+    .custom-compose-content {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px){
+    .custom-top-navbar-container{
+        border-left: none;
+    }
+    .custom-column-middle {
+        width: 75%;
+    }
+    .custom-compose-content {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px){
+    .custom-top-navbar-container{
+        border-left: none;
+    }
+    .custom-column-middle {
+        width: 75%;
+    }
+    .custom-compose-content {
+        width: 80%;
+    }
+}
+
 @media screen and (min-width: 1367px) {
     .custom-column-middle {
         width: 80%;
@@ -3356,7 +3409,42 @@ textarea.invitee_emails {
     }
 }
 
-.custom-rtl{
-    direction: rtl;
-    text-align: right;
+@media screen and (min-width: 768px) {
+    .custom-top-navbar-container{
+        padding-left: 5px;
+        width: 99%;
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custom-top-navbar-container{
+        width: 90%;
+        padding-right: 10px;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .custom-top-navbar-container{
+        width: 88%;
+        padding-right: 10px;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .custom-top-navbar-container{
+        width: 86%;
+        padding-right: 10px;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .custom-top-navbar-container{
+        width: 82.5%;
+        padding-right: 10px;
+        border-left: none;
+    }
 }
