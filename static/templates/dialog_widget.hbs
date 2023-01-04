@@ -1,6 +1,6 @@
 <div class="micromodal" id="dialog_widget_modal" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1">
-        <div {{#if id}}id="{{id}}" {{/if}}class="modal__container" role="dialog" aria-modal="true" aria-labelledby="dialog_title" data-simplebar>
+        <div {{#if id}}id="{{id}}" {{/if}}class="modal__container custom-rtl" role="dialog" aria-modal="true" aria-labelledby="dialog_title" data-simplebar>
             <header class="modal__header">
                 <h1 class="modal__title dialog_heading">
                     {{{ heading_text }}}
@@ -16,9 +16,9 @@
             </main>
             <footer class="modal__footer">
                 {{#unless single_footer_button}}
-                <button class="modal__btn dialog_cancel_button" aria-label="{{t 'Close this dialog window' }}" data-micromodal-close>{{t "Cancel" }}</button>
+                <button style="margin: 0 2.5px;" class="modal__btn dialog_cancel_button" aria-label="{{t 'Close this dialog window' }}" data-micromodal-close>{{t "Cancel" }}</button>
                 {{/unless}}
-                <button class="modal__btn dialog_submit_button"{{#if single_footer_button}} aria-label="{{t 'Close this dialog window' }}" data-micromodal-close{{/if}}>
+                <button style="background-color: #1a1f2d;" class="modal__btn dialog_submit_button"{{#if single_footer_button}} aria-label="{{t 'Close this dialog window' }}" data-micromodal-close{{/if}}>
                     <span>{{{ html_submit_button }}}</span>
                     <div class="modal__spinner"></div>
                 </button>
