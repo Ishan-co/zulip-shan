@@ -613,7 +613,7 @@
   "Menu": "منو",
   "Menus": "منوها",
   "Message #{stream_name}": "پیام #{stream_name}",
-  "Message #{stream_name} > {topic_name}": "پیام #{stream_name} > {topic_name}",
+  "Message #{stream_name} > {topic_name}": "پیام در کانال #{stream_name} با موضوع {topic_name}",
   "Message actions": "اقدامات برروی پیام",
   "Message and topic editing": "ویرایش پیام و موضوع",
   "Message deletion": "حذف پیام",
