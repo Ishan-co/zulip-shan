@@ -1,6 +1,6 @@
 <div class="micromodal" id="login_to_access_modal" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1">
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="login_to_access_modal_label">
+        <div class="modal__container custom-rtl" role="dialog" aria-modal="true" aria-labelledby="login_to_access_modal_label">
             <header class="modal__header">
                 <h1 class="modal__title" id="login_to_access_modal_label">
                     {{#tr}}
@@ -26,10 +26,10 @@
                 </p>
             </main>
             <footer class="modal__footer">
-                <a class="modal__btn dialog_submit_button" href="{{signup_link}}">
+                <a style="background-color: #1a1f2d;" class="modal__btn dialog_submit_button" href="{{signup_link}}">
                     <span>{{t "Sign up" }}</span>
                 </a>
-                <a class="modal__btn dialog_submit_button" href="{{login_link}}">
+                <a style="background-color: #1a1f2d;" class="modal__btn dialog_submit_button" href="{{login_link}}">
                     <span>{{t "Log in" }}</span>
                 </a>
             </footer>

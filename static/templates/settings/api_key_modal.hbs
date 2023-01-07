@@ -1,6 +1,6 @@
 <div class="micromodal" id="api_key_modal" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1">
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="api_key_modal_label">
+        <div class="modal__container custom-rtl" role="dialog" aria-modal="true" aria-labelledby="api_key_modal_label">
             <header class="modal__header">
                 <h1 class="modal__title" id="api_key_modal_label">
                     {{t "Show API key" }}
@@ -30,12 +30,12 @@
                 </div>
             </main>
             <footer class="modal__footer">
-                <button type="submit" name="view_api_key" id="get_api_key_button" class="modal__btn dialog_submit_button">
+                <button style="background-color: #1a1f2d;" type="submit" name="view_api_key" id="get_api_key_button" class="modal__btn dialog_submit_button">
                     {{t 'Get API key' }}
                 </button>
                 <div id="api_key_buttons">
-                    <button class="modal__btn dialog_submit_button" id="regenerate_api_key" aria-label="{{t 'Generate new API key' }}">{{t "Generate new API key" }}</button>
-                    <a class="modal__btn dialog_submit_button" id="download_zuliprc" download="{{zuliprc}}" tabindex="0">{{t "Download .zuliprc" }}</a>
+                    <button style="background-color: #1a1f2d;" class="modal__btn dialog_submit_button" id="regenerate_api_key" aria-label="{{t 'Generate new API key' }}">{{t "Generate new API key" }}</button>
+                    <a style="background-color: #1a1f2d;" class="modal__btn dialog_submit_button" id="download_zuliprc" download="{{zuliprc}}" tabindex="0">{{t "Download .zuliprc" }}</a>
                 </div>
             </footer>
         </div>

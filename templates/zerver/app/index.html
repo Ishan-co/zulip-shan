@@ -10,6 +10,7 @@
 {% block customhead %}
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <link href="/static/images/logo/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
+<link rel="stylesheet" href="https://cdn.i-shan.ir/files/fonts/fonts.min.css"/>
 <style>
     #app-loading {
     font-size: 16px;
@@ -67,13 +68,13 @@
 </div>
 
 <div id="app-loading">
-    <div id="app-loading-middle-content">
+    <div id="app-loading-middle-content" style="color: #1a1f2d">
         <div id="app-loading-logo">
-            <img src="/static/images/logo/zulip-icon-circle.svg" />
+            <img src="/static/images/logo/ishan-icon-circle.svg"/>
         </div>
-        <h3>{{ _('Loading...') }}</h3>
+        <h3 style="direction: rtl;margin-top: 100%;display: none;">{{ _('Loading...') }}</h3>
     </div>
-    <div id="app-loading-bottom-content">
+    <div id="app-loading-bottom-content" style="display: none">
         <p>{% trans %}If this message does not go away, try <a id="reload-lnk">reloading</a> the page.{% endtrans %}</p>
         <script nonce="{{ csp_nonce }}">
             document.addEventListener('DOMContentLoaded', function () {
@@ -85,14 +86,13 @@
         </script>
     </div>
 </div>
-
 <div id="manage_streams_container"></div>
 <div id="manage_groups_container"></div>
 <div id="drafts_table"></div>
 <div id="settings_overlay_container" class="overlay" data-overlay="settings" aria-hidden="true">
 </div>
 
-<div id="navbar_alerts_wrapper"></div>
+<div id="navbar_alerts_wrapper" style="display: none;"></div>
 <div id="navbar-container"></div>
 
 <div class="fixed-app">
@@ -150,17 +150,14 @@
     <div class="app-main">
         <div class="column-left" id="left-sidebar-container">
         </div>
-        <div class="column-middle">
+        <div class="column-middle custom-column-middle">
             <div class="column-middle-inner">
                 <div id="recent_topics_view">
                     <div class="recent_topics_container">
-                        <div id="recent_topics_table"></div>
+                        <div id="recent_topics_table" style="margin: 5px; padding: 5px;border-right: none;"></div>
                         <div id="recent_topics_bottom_whitespace">
                             <div class="bottom-messages-logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 773.12 773.12">
-                                    <circle cx="386.56" cy="386.56" r="386.56"/>
-                                    <path d="M566.66 527.25c0 33.03-24.23 60.05-53.84 60.05H260.29c-29.61 0-53.84-27.02-53.84-60.05 0-20.22 9.09-38.2 22.93-49.09l134.37-120c2.5-2.14 5.74 1.31 3.94 4.19l-49.29 98.69c-1.38 2.76.41 6.16 3.25 6.16h191.18c29.61 0 53.83 27.03 53.83 60.05zm0-281.39c0 20.22-9.09 38.2-22.93 49.09l-134.37 120c-2.5 2.14-5.74-1.31-3.94-4.19l49.29-98.69c1.38-2.76-.41-6.16-3.25-6.16H260.29c-29.61 0-53.84-27.02-53.84-60.05s24.23-60.05 53.84-60.05h252.54c29.61 0 53.83 27.02 53.83 60.05z"/>
-                                </svg>
+                                <img src="http://localhost:9991/static/images/logo/ishan-logo.svg" alt="شرکت دانش و فناوری آینده روشن">
                             </div>
                             <div id="recent_topics_loading_messages_indicator"></div>
                         </div>
@@ -168,9 +165,9 @@
                 </div>
                 <div id="message_feed_container">
                     <div class="fixed-app" id="floating_recipient_bar">
-                        <div class="app-main recipient_bar_content">
+                        <div class="app-main recipient_bar_content" style="width: 100%">
                             <div class="column-middle column-overlay recipient-bar-main">
-                                <div class="floating_recipient">
+                                <div class="floating_recipient custom-floating-recipient" style="width: 100%;display: none;">
                                     <div style="display: none;" id="current_label_stream" class="recipient_row">
                                         <div class="message_label_clickable message_header message_header_stream right_part"></div>
                                     </div>
@@ -190,13 +187,7 @@
                         </div>
                     </div>
                     <div class="message_area_padder message_list" id="main_div">
-                        <div class="top-messages-logo">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 773.12 773.12">
-                                <circle cx="386.56" cy="386.56" r="386.56"/>
-                                <path d="M566.66 527.25c0 33.03-24.23 60.05-53.84 60.05H260.29c-29.61 0-53.84-27.02-53.84-60.05 0-20.22 9.09-38.2 22.93-49.09l134.37-120c2.5-2.14 5.74 1.31 3.94 4.19l-49.29 98.69c-1.38 2.76.41 6.16 3.25 6.16h191.18c29.61 0 53.83 27.03 53.83 60.05zm0-281.39c0 20.22-9.09 38.2-22.93 49.09l-134.37 120c-2.5 2.14-5.74-1.31-3.94-4.19l49.29-98.69c1.38-2.76-.41-6.16-3.25-6.16H260.29c-29.61 0-53.84-27.02-53.84-60.05s24.23-60.05 53.84-60.05h252.54c29.61 0 53.83 27.02 53.83 60.05z"/>
-                            </svg>
-                        </div>
-                        <div id="loading_older_messages_indicator"></div>
+                        <div id="loading_older_messages_indicator""></div>
                         <div id="page_loading_indicator"></div>
                         <div id="message_feed_errors_container"></div>
                         <div class="message_table focused_table" id="zhome" role="list" aria-live="polite" aria-label="{{ _('Messages') }}">
@@ -216,7 +207,7 @@
                 </div>
             </div><!--/tab-content-->
         </div>
-        <div class="column-right" id="right-sidebar-container">
+        <div class="column-right" id="right-sidebar-container" style="display: none">
         </div><!--/right sidebar-->
     </div><!--/row-->
     <div class="informational-overlays overlay new-style" data-overlay="informationalOverlays" aria-hidden="true">
