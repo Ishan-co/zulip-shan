@@ -281,7 +281,7 @@ function filter_emojis() {
     }
 }
 
-function toggle_reaction(emoji_name, event) {
+export function toggle_reaction(emoji_name, event) {
     const message_id = message_lists.current.selected_id();
     const message = message_store.get(message_id);
     if (!message) {

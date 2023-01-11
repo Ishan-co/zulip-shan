@@ -98,6 +98,35 @@ function update_ui_and_send_reaction_ajax(message_id, reaction_info) {
             blueslip.warn(response);
         },
     };
+    if (reaction_info.emoji_code === "2705" || reaction_info.emoji_code === "274c"){
+        console.log(
+            "reaction - ", "\n\n",
+            "message_id: ", message_id, "\n\n",
+            "react_info: ", JSON.stringify(reaction_info, null, 2), "\n\n",
+            "reaction: ", JSON.stringify(reaction, null, 2)
+        )
+        const message_detail = get_message(message_id)
+        const my_args = {
+            url: "http://192.168.1.13:4000/v1/exercise/submitStatus",
+            data: {
+                support_zulip_id: reaction.user_id,
+                message_id: reaction.message_id,
+                emoji_code: reaction.emoji_code
+            },
+            success() {},
+            error(xhr) {
+                const response = channel.xhr_error_message("Error sending reaction", xhr);
+                // Errors are somewhat common here, due to race conditions
+                // where the user tries to add/remove the reaction when there is already
+                // an in-flight request.  We eventually want to make this a blueslip
+                // error, rather than a warning, but we need to implement either
+                // #4291 or #4295 first.
+                blueslip.warn(response);
+            },
+        };
+         channel.post(my_args);
+    }
+
     if (operation === "add") {
         channel.post(args);
     } else if (operation === "remove") {
