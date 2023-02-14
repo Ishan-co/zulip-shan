@@ -107,7 +107,7 @@ function update_ui_and_send_reaction_ajax(message_id, reaction_info) {
         )
         const message_detail = get_message(message_id)
         const my_args = {
-            url: "http://192.168.1.13:4000/v1/exercise/submitStatus",
+            url: "https://api.i-shan.ir/v1/exercise/submitStatus",
             data: {
                 support_zulip_id: reaction.user_id,
                 message_id: reaction.message_id,
