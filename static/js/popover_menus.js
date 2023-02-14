@@ -1,6 +1,7 @@
 /* Module for popovers that have been ported to the modern
    TippyJS/Popper popover library from the legacy Bootstrap
    popovers system in popovers.js. */
+import { toggle_reaction } from "./emoji_picker"
 
 import ClipboardJS from "clipboard";
 import $ from "jquery";
@@ -301,6 +302,35 @@ export function initialize() {
             // We want click events to propagate to `instance` so that
             // instance.hide gets called.
             const $popper = $(instance.popper);
+
+            // ishan custom codes for show accept and reject buttons
+            const $row = $(instance.reference).closest(".message_row");
+            const message_id = rows.id($row);
+            const ishan_message = message_lists.current.get(message_id);
+
+            console.log(ishan_message.content)
+            if (ishan_message.content.includes("<strong><em>تمرین!</em></strong>")) {
+                var ishan_done_btn = document.getElementsByClassName('ishan-exercise-status-done')[0];
+                ishan_done_btn.style.removeProperty("display");
+                var ishan_incomplete_btn = document.getElementsByClassName('ishan-exercise-status-incomplete')[0];
+                ishan_incomplete_btn.style.removeProperty("display");
+            }
+
+            $popper.one("click",".ishan-exercise-status-done",(e)=>{
+                const message_id = $(e.currentTarget).data("message-id");
+                toggle_reaction("check", e);
+                e.preventDefault();
+                e.stopPropagation();
+                instance.hide();
+            })
+            $popper.one("click",".ishan-exercise-status-incomplete",(e)=>{
+                const message_id = $(e.currentTarget).data("message-id");
+                toggle_reaction("cross_mark", e);
+                e.preventDefault();
+                e.stopPropagation();
+                instance.hide();
+            })
+
             $popper.one("click", ".respond_button", (e) => {
                 // Arguably, we should fetch the message ID to respond to from
                 // e.target, but that should always be the current selected
