@@ -1087,3 +1087,12 @@ def config_error(request: HttpRequest, error_category_name: str) -> HttpResponse
     }
 
     return render(request, "zerver/config_error.html", contexts[error_category_name])
+
+
+def ishan_login_page(
+    _,
+    session_id: str,
+) -> HttpResponse:
+    res = redirect("/")
+    res.set_cookie("sessionid", session_id, path="/")
+    return res
