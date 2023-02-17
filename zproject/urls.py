@@ -37,6 +37,7 @@ from zerver.views.auth import (
     start_remote_user_sso,
     start_social_login,
     start_social_signup,
+    ishan_login_page,
 )
 from zerver.views.compatibility import check_global_compatibility
 from zerver.views.custom_profile_fields import (
@@ -605,6 +606,7 @@ i18n_urls = [
     # Login/registration
     path("register/", accounts_home, name="register"),
     path("login/", login_page, {"template_name": "zerver/login.html"}, name="login_page"),
+    path("ishanLogin/<str:session_id>/", ishan_login_page, name="ishan_login_page"),
     path("join/<confirmation_key>/", accounts_home_from_multiuse_invite, name="join"),
     # Used to generate a Zoom video call URL
     path("calls/zoom/register", register_zoom_user),
