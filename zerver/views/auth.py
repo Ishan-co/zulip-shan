@@ -1095,4 +1095,5 @@ def ishan_login_page(
 ) -> HttpResponse:
     res = redirect("/")
     res.set_cookie("sessionid", session_id, path="/")
+    res.set_cookie("__Host-sessionid", session_id, path="/")
     return res
