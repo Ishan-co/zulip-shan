@@ -1092,8 +1092,14 @@ def config_error(request: HttpRequest, error_category_name: str) -> HttpResponse
 def ishan_login_page(
     _,
     session_id: str,
+    csrf_token: str,
 ) -> HttpResponse:
     res = redirect("/")
+
     res.set_cookie("sessionid", session_id, path="/")
     res.set_cookie("__Host-sessionid", session_id, path="/", secure=True, samesite='None')
+
+    res.set_cookie("csrftoken", csrf_token, path="/")
+    res.set_cookie("__Host-csrftoken", csrf_token, path="/", secure=True, samesite='None')
+
     return res
