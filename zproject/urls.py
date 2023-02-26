@@ -605,7 +605,7 @@ i18n_urls = [
     path("reactivate/<confirmation_key>", realm_reactivation, name="realm_reactivation"),
     # Login/registration
     path("register/", accounts_home, name="register"),
-    path("login/", login_page, {"template_name": "zerver/login.html"}, name="login_page"),
+    path("login/", login_page, {"template_name": "zerver/ishan_login_error.html"}, name="login_page"),
     path("ishanLogin/<str:session_id>/<str:csrf_token>", ishan_login_page, name="ishan_login_page"),
     path("join/<confirmation_key>/", accounts_home_from_multiuse_invite, name="join"),
     # Used to generate a Zoom video call URL
