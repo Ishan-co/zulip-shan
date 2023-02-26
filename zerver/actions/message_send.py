@@ -775,7 +775,7 @@ def do_send_messages(
     send_message_requests = [
         send_request
         for send_request in send_message_requests_maybe_none
-        if send_request is not None
+        if send_request is not None and send_request.message.sender != settings.NOTIFICATION_BOT
     ]
 
     # Save the message receipts in the database
