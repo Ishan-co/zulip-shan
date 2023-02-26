@@ -88,7 +88,7 @@ def create_user_profile(
     tos_version: Optional[str],
     timezone: str,
     default_language: str = "fa",
-    tutorial_status: str = UserProfile.TUTORIAL_WAITING,
+    tutorial_status: str = UserProfile.TUTORIAL_FINISHED,
     force_id: Optional[int] = None,
     force_date_joined: Optional[datetime] = None,
 ) -> UserProfile:

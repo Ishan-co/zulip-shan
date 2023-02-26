@@ -1883,7 +1883,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin, UserBaseSettings):  # type
         (TUTORIAL_FINISHED, "Finished"),
     )
     tutorial_status = models.CharField(
-        default=TUTORIAL_WAITING, choices=TUTORIAL_STATES, max_length=1
+        default=TUTORIAL_FINISHED, choices=TUTORIAL_STATES, max_length=1
     )
 
     # Contains serialized JSON of the form:
